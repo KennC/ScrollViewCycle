@@ -12,16 +12,9 @@ class ScrollCycle: UIView,UIScrollViewDelegate {
     var delegate: ScrollCycleDelegate? // create a new delegate instance
     var scrollView: UIScrollView!
     var someImages: Array<UIImage> = []
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        
     }
     
     override init(frame: CGRect) {
@@ -31,7 +24,6 @@ class ScrollCycle: UIView,UIScrollViewDelegate {
     func createScrollView()
     {
 
-//        var someImages: Array<UIImage> = []
         someImages=(delegate?.getImage())!
         someImages.append(someImages[0])
         someImages.insert(someImages[someImages.count-2], atIndex: 0)
@@ -71,12 +63,9 @@ class ScrollCycle: UIView,UIScrollViewDelegate {
 
         if (self.scrollView.contentOffset.x == 0) {
             self.scrollView.setContentOffset(CGPointMake(bounds.size.width*CGFloat(someImages.count-2),0), animated: false)
-            print("123")
         }
         else if(self.scrollView.contentOffset.x == bounds.size.width*CGFloat(someImages.count-1)) {
             self.scrollView.setContentOffset(CGPointMake(bounds.size.width,0), animated: false)
-            print("456")
-
         }
     }
 

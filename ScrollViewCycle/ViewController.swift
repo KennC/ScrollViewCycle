@@ -19,7 +19,6 @@ class ViewController: UIViewController,ScrollCycleDelegate {
         let width = bounds.size.width
         let height = bounds.size.height
         
-        
         customView = ScrollCycle(frame: CGRect(x: 0, y: 0, width: width, height: height))
         customView.delegate=self
         customView.executeRequest()
