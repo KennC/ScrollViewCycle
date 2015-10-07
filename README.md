@@ -1,3 +1,3 @@
 # ScrollViewCycle
 
-![alt tag](ScrollViewCycle/Demo.gif)
+![alt tag](https://raw.github.com/KennC/ScrollViewCycle/Demo.gif)
