@@ -26,7 +26,9 @@ class ViewController: UIViewController,ScrollCycleDelegate {
         self.view .addSubview(customView)
         
     }
-
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -35,10 +37,9 @@ class ViewController: UIViewController,ScrollCycleDelegate {
     func getImage()->Array<UIImage>{
         
         var someImages = [UIImage]()
-        someImages.append(UIImage(named: "blue.jpg")!)
         someImages.append(UIImage(named: "green.jpg")!)
+        someImages.append(UIImage(named: "blue.jpg")!)
         someImages.append(UIImage(named: "red.jpg")!)
-
         return someImages
     }
 }

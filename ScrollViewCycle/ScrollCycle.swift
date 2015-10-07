@@ -41,9 +41,10 @@ class ScrollCycle: UIView,UIScrollViewDelegate {
             imgView.frame = CGRectMake(CGFloat(index)*width,0,width,height)
             contentImg.addSubview(imgView)
             
-            let label = UILabel(frame: CGRectMake(CGFloat(index)*width, 0, 60, 60))
+            let label = UILabel(frame: CGRectMake(((CGFloat(index)*width)+(width/2))-50,50, 100, 30))
             label.textAlignment = NSTextAlignment.Center
-            label.text="\(index)"
+            label.text="imgView:\(index)"
+            label.backgroundColor=UIColor.clearColor()
             contentImg.addSubview(label)
 
         }
